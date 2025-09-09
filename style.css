@@ -58,6 +58,7 @@ header button {
     background-color: black;
     transition: 1s;
 }
+
 header svg {
     height: 20px;
     width: 20px;
@@ -80,14 +81,16 @@ header svg {
     box-shadow: 1px 10px 28px -3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 1px 10px 28px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 10px 28px -3px rgba(0, 0, 0, 0.75);
+    border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
 }
 
 .containerPhotos img:hover {
     transition: 0.8s;
     transform: scale(1.05);
-    border-color: #000000;
-    box-shadow: 0 0 0 8px #000000;
-    border-radius: 24px 24px 24px 24px;
-    -webkit-border-radius: 24px 24px 24px 24px;
-    -moz-border-radius: 24px 24px 24px 24px;
+    border-color: #007bff;
+    box-shadow: 1px 10px 49px 12px rgba(0,123,255,0.75);
+-webkit-box-shadow: 1px 10px 49px 12px rgba(0,123,255,0.75);
+-moz-box-shadow: 1px 10px 49px 12px rgba(0,123,255,0.75);
 }
