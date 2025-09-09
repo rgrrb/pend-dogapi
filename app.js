@@ -13,7 +13,7 @@ async function buscarApiImagens (breed){
 
 async function searchImage () {
 
-    const body = document.querySelector('main')
+    const body = document.querySelector('body')
     const containerPhotos = document.createElement('div')
     containerPhotos.classList.add('containerPhotos')
 
