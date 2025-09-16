@@ -12,9 +12,7 @@ async function buscarApiImagens (breed){
 }
 
 async function searchImage () {
-
-    const body = document.querySelector('body')
-    const containerPhotos = document.createElement('div')
+    const containerPhotos = document.getElementById('containerPhotos')
     containerPhotos.classList.add('containerPhotos')
 
     const searched = document.getElementById('search').value
@@ -23,12 +21,14 @@ async function searchImage () {
 
     const photo = await buscarApiImagens(searched);
 
+    containerPhotos.replaceChildren()
+
     photo.forEach((url) => {
         const img = document.createElement('img')
         img.src = url;
         console.log(img)
         containerPhotos.appendChild(img)
-        body.appendChild(containerPhotos)
+
     });
 
     
