@@ -1,6 +1,8 @@
 'use strict'
 
 const searchImg = document.getElementById('searchImg');
+const inputSearch = document.getElementById('search');
+const imgCard = document.getElementsByClassName('containerPhotos');
 
 async function buscarApiImagens (breed){
     const url = `https://dog.ceo/api/breed/${breed}/images`;
@@ -17,17 +19,18 @@ async function searchImage () {
 
     const searched = document.getElementById('search').value
 
-    const dogImg = document.createElement('img')
-
     const photo = await buscarApiImagens(searched);
 
     containerPhotos.replaceChildren()
 
     photo.forEach((url) => {
+        const a = document.createElement('a')
         const img = document.createElement('img')
         img.src = url;
-        console.log(img)
-        containerPhotos.appendChild(img)
+        a.href = url;
+        a.setAttribute('target', '_blank')
+        a.appendChild(img)
+        containerPhotos.appendChild(a)
 
     });
 
@@ -35,3 +38,8 @@ async function searchImage () {
 }
 
 searchImg.addEventListener('click', searchImage)
+inputSearch.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter'){
+        searchImage()
+    }
+})

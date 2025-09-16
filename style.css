@@ -47,8 +47,8 @@ header input {
 }
 
 header:has(input:focus) {
-    border-color: #007bff;
-    box-shadow: 0 0 0 8px #007bff;
+    border-color: #000000;
+    box-shadow: 0 0 0 8px #000000;
     transition: 1s;
 }
 
@@ -89,8 +89,20 @@ header svg {
 .containerPhotos img:hover {
     transition: 0.8s;
     transform: scale(1.05);
-    border-color: #007bff;
-    box-shadow: 1px 10px 49px 12px rgba(0,123,255,0.75);
--webkit-box-shadow: 1px 10px 49px 12px rgba(0,123,255,0.75);
--moz-box-shadow: 1px 10px 49px 12px rgba(0,123,255,0.75);
+    transform: rotateY(180deg);
+    box-shadow: 1px 10px 49px 12px rgba(0, 0, 0, 0.75);
+-webkit-box-shadow: 1px 10px 49px 12px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 1px 10px 49px 12px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 768px) {
+    header{
+        width: 320px;
+        gap: 5px;
+    }
+    header input{
+        width: 220px;
+    }
+    .containerPhotos{
+        grid-template-columns: 1;
+    }
 }
